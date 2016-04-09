@@ -1,0 +1,13 @@
+[Unit]
+Description=EnviR to Graphite
+After=network.target
+
+[Service]
+ExecStart=/opt/envir-to-graphite
+Restart=on-abnormal
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
